@@ -2,10 +2,10 @@
 A basic file encryption/decryption python command line tool.  Uses AES for encryption.
 
 
-Encrpyt:
-  python password.py masterKey textFile.txt -e
+# Encrpyt
+python password.py masterKey textFile.txt -e
 
-Decrypt:
-  python password.py masterKey textFile.txt -d
+# Decrypt
+python password.py masterKey textFile.txt -d
   
 
