@@ -1,3 +1,9 @@
+'''
+file: gui.py
+version: python3
+author: Evan Putnam
+description: A terminal tool for AES encryption/decryption with a master password
+'''
 from Crypto.Cipher import AES
 import base64
 import hashlib
@@ -12,7 +18,7 @@ def encrypt(someKey, text):
     :param text text to ecnrypt:
     :return encrypted text:
     '''
-    secret = AES.new(someKey[:32])
+    secret = AES.new(someKey)
     tagStr = (str(text) + (AES.block_size - len(str(text)) % AES.block_size)* "\0")
     cipher = base64.b64encode(secret.encrypt(tagStr))
     return cipher.decode('UTF-8')
