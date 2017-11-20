@@ -65,7 +65,7 @@ class Window(Frame):
             return
         masterPass = hashlib.sha256(self.masterEntry.get().encode('utf-8')).digest()
         name = askopenfilename(initialdir=os.getcwd(),
-                               filetypes=(("Text File", "*.txt")),
+                               filetypes=(("Text File", "*.txt"),("All Files", "*.*")),
                                title="Choose a file."
                                )
         password.encryptFile(name, masterPass)
@@ -85,7 +85,7 @@ class Window(Frame):
             return
         masterPass = hashlib.sha256(self.masterEntry.get().encode('utf-8')).digest()
         name = askopenfilename(initialdir=os.getcwd(),
-                               filetypes=(("Text File", "*.txt")),
+                               filetypes=(("Text File", "*.txt"), ("All Files", "*.*")),
                                title="Choose a file."
                                )
         self.textBox.delete('1.0', END)
